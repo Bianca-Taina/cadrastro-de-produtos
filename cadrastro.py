@@ -1,7 +1,7 @@
 def formatar_nome(nome):
     return nome.strip().title()
 
-def cadrastrar_produto():
+def cadastrar_produto():
     nome = input("Digite o nome do produto: ")
     preco = float(input("Digite o preço do produto: "))
     categoria = input("Digite a categoria do produto: ")
@@ -16,6 +16,23 @@ def listar_produtos():
     try:
         with open("produtos,txt", "r", encoding="utf-8") as arquivo:
             for linha in arquivo:
-                nome
+                nome, preco, categoria = linha.strip().strip(";")
+                print(f"Produto: {nome} | preço: R${preco} | Categoria: {categoria}")
+    except FileNotFoundError:
+        print("Nenhum produto cadastrado ainda.")
+while True:
+    print("\n1 - Cadastrar produto")
+    print("2 - Listar produtos")
+    print("0 - Sair")
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        produto = cadastrar_produto()
+        salvar_produto(produto)
+    elif opcao == "2":
+        listar_produtos()
+    elif opcao == "0":
+        break        
+
 
         

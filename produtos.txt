@@ -1,0 +1,8 @@
+Pao;5.0;cereais
+Pão;9.0;cereais
+Detergente;5.5;limpeza
+Café;40.0;grãos
+Picanha;40.0;carne
+Bolacha;5.0;doce
+Trigo;12.5;cereais
+Perfumes;500.0;botica
